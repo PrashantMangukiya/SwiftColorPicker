@@ -28,6 +28,7 @@ The color picker view controller created with swift. It can be used to pick colo
 + 
 + **Add Collection View within view controller**
 + set collection view background color white.
++ set collection view cell identfier ``ColorCell``
 + uncheck ``Shows Horizonral Indicator``
 + uncheck ``Shows Vertical Indicator``
 + set Cell Size, Width ``24`` Height ``24``
@@ -35,7 +36,7 @@ The color picker view controller created with swift. It can be used to pick colo
 + set View  X ``8``, Y ``8``, Width ``257``, Height ``415``
 + 
 + **Set collection view contraints**
-+ Leading Space ``8``, Trainling Space ``8``, Top Space ``8``, Bottom Space ``8``
++ Leading Space ``8``, Trailing Space ``8``, Top Space ``8``, Bottom Space ``8``
 + 
 + **Set collection view outlet within ``ColorPickerViewController.swift``**
 + i.e. connect collection view with ``@IBOutlet var colorCollectionView : UICollectionView!``
