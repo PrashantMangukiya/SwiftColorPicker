@@ -1,7 +1,7 @@
 # Swift Color Picker
 **Color picker created with Swift, iOS8, Xcode 6.4**
 
-Supported device - iPhone 4S, 5, 5C, 6, 6Plus, iPad having iOS8.
+Supported device - iPhone 4s, 5, 5s, 5c, 6, 6 Plus, iPad having iOS8.
 
 ![ScreenShot iPhone5](../master/Screenshots/main-1t.png)
 ![ScreenShot iPhone5](../master/Screenshots/main-2t.png)
