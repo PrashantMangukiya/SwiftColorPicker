@@ -1,25 +1,31 @@
 # Swift Color Picker
-**Color picker created with Swift, iOS8, Xcode 6.4**
-
-Supported device - iPhone 4s, 5, 5s, 5c, 6, 6 Plus, iPad having iOS8.
-
-![ScreenShot iPhone5](../master/Screenshots/main-1t.png)
-![ScreenShot iPhone5](../master/Screenshots/main-2t.png)
-
+Color picker build with Swift 2, iOS 9, Xcode 7.
 
 ## Overview
 The color picker view controller created with swift. It can be used to pick color from palette either as Hex string or UIColor.  Just add source file within any swift project, add view controller within storyboard, add collection view, set necessary properrty and constrains, and invoke as a popup. Once color picked it returns selected color value within delegate method.
 
+![ScreenShot iPhone5](../master/Screenshots/main-1t.png)
+![ScreenShot iPhone5](../master/Screenshots/main-2t.png)
+
+## Features:
 + Can be invoked by UIButton.
 + Can be invoked by navigation bar button.
 + You can Add more colors to palette via Colors.plist file.
++ Buid with Swift 2, iOS 9, Xcode 7 only, No other dependency.
 
+## Platform
++ Swift 2
++ iOS 9
++ Xcode 7
 
-## Setup Color Picker In Your Project
+##Supported Device
+iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
+
+## How To Setup Color Picker Within Your Project
 
 ###### 1 - Copy ``ColorPickerViewController.swift`` and ``Colors.plist`` into your project. 
  
-###### 2 - Setup ColorPickerViewController in a Storyboard.
+###### 2 - Setup ColorPickerViewController within a Storyboard.
 + **Add View Controller within Storyboard**
 + set Class ``ColorPickerViewController``
 + set Storyboard ID ``sbColorPicker``
@@ -40,17 +46,14 @@ The color picker view controller created with swift. It can be used to pick colo
 + 
 + **Set collection view outlet within ``ColorPickerViewController.swift``**
 + i.e. connect collection view with ``@IBOutlet var colorCollectionView : UICollectionView!``
-+ 
 
 ###### 3 - Now you can use color picker from any view controller.
 Please refer 'How To Use' section for more details.
-
 
 ## How To Update Color Palette
 - Open ``Colors.plist`` file,  
 - add/update color hex value.
 - e.g. ``<string>002133</string>``
-
 
 ## How To Use
 You can use color picker from any view controller.
@@ -71,7 +74,7 @@ func adaptivePresentationStyleForPresentationController(controller: UIPresentati
 }
 </pre>
 
-**Add color picker delegate function.** This function will be called once color picked, you can add custom code to handle the selected color. i.e you can assign selected color to class variable or change  background color of some element etc.
+**Add color picker delegate function.** This function will be called after color picked, you can add custom code to handle the selected color. i.e you can assign selected color to class variable or change background color of any element etc.
 <pre>
 // MARK: Color picker delegate functions
 // called by color picker after color selected.
@@ -163,4 +166,7 @@ private func showColorPicker(){
 
 ## License
 SwiftColorPicker is available under the MIT license. See the LICENSE file for more info.
+
+## Legacy Version
+Xcode 6, iOS 8.4 based source code moved to ``Source-Xcode6`` folder. Please note that Xcode 6 based source code are deprecated and not upto date. I will suggest to use latest Xcode 7 based source from``SwiftColorPicker`` folder at root.
 
