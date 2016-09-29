@@ -1,5 +1,5 @@
 # Swift Color Picker
-Color picker build with Swift 2, iOS 9, Xcode 7.
+Color picker build with Swift 3, iOS 10, Xcode 8.
 
 ## Overview
 The color picker view controller created with swift. It can be used to pick color from palette either as Hex string or UIColor.  Just add source file within any swift project, add view controller within storyboard, add collection view, set necessary properrty and constrains, and invoke as a popup. Once color picked it returns selected color value within delegate method.
@@ -11,27 +11,27 @@ The color picker view controller created with swift. It can be used to pick colo
 + Can be invoked by UIButton.
 + Can be invoked by navigation bar button.
 + You can Add more colors to palette via Colors.plist file.
-+ Buid with Swift 2, iOS 9, Xcode 7 only, No other dependency.
++ Build with Swift 3, iOS 10, Xcode 8 only, No other dependency.
 
 ## Platform
-+ Swift 2
-+ iOS 9
-+ Xcode 7
++ Swift 3
++ iOS 10
++ Xcode 8
 
-##Supported Device
-iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
+##Supported Devices
+iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPads having iOS 10.
 
 ## How To Setup Color Picker Within Your Project
 
-###### 1 - Copy ``ColorPickerViewController.swift`` and ``Colors.plist`` into your project. 
- 
+###### 1 - Copy ``ColorPickerViewController.swift`` and ``Colors.plist`` into your project.
+
 ###### 2 - Setup ColorPickerViewController within a Storyboard.
 + **Add View Controller within Storyboard**
 + set Class ``ColorPickerViewController``
 + set Storyboard ID ``sbColorPicker``
 + within 'Attribute Inspector' set Similated metrics >> Size``Freeform``
 + Within 'Size inspector' set Width ``273``, Height ``431``
-+ 
++
 + **Add Collection View within view controller**
 + set collection view background color white.
 + set collection view cell identfier ``ColorCell``
@@ -40,10 +40,10 @@ iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
 + set Cell Size, Width ``24`` Height ``24``
 + set Minimum Spacing, For Cells ``1``, For Lines ``1``
 + set View  X ``8``, Y ``8``, Width ``257``, Height ``415``
-+ 
++
 + **Set collection view contraints**
 + Leading Space ``8``, Trailing Space ``8``, Top Space ``8``, Bottom Space ``8``
-+ 
++
 + **Set collection view outlet within ``ColorPickerViewController.swift``**
 + i.e. connect collection view with ``@IBOutlet var colorCollectionView : UICollectionView!``
 
@@ -79,11 +79,11 @@ func adaptivePresentationStyleForPresentationController(controller: UIPresentati
 // MARK: Color picker delegate functions
 // called by color picker after color selected.
 func colorPickerDidColorSelected(#selectedUIColor: UIColor, selectedHexColor: String) {
-       
+
   // update color value within class variable
   self.selectedColor = selectedUIColor
   self.selectedColorHex = selectedHexColor
-        
+
   // set preview background to selected color
   self.colorPreview.backgroundColor = selectedUIColor
 }
@@ -94,36 +94,36 @@ func colorPickerDidColorSelected(#selectedUIColor: UIColor, selectedHexColor: St
 // MARK: - Utility functions
 // show color picker from UIButton
 private func showColorPicker(){
-    
+
     // initialise color picker view controller
     let colorPickerVc = storyboard?.instantiateViewControllerWithIdentifier("sbColorPicker") as! ColorPickerViewController
-    
+
     // set modal presentation style
     colorPickerVc.modalPresentationStyle = .Popover
-    
+
     // set max. size
     colorPickerVc.preferredContentSize = CGSizeMake(265, 400)
-    
+
     // set color picker deleagate to current view controller
     // must write delegate method to handle selected color
     colorPickerVc.colorPickerDelegate = self
-    
+
     // show popover
     if let popoverController = colorPickerVc.popoverPresentationController {
-        
+
         // set source view
         popoverController.sourceView = self.view
-        
+
         // show popover form button
         popoverController.sourceRect = self.changeColorButton.frame
-        
+
         // show popover arrow at feasible direction
         popoverController.permittedArrowDirections = UIPopoverArrowDirection.Any
-        
+
         // set popover delegate self
         popoverController.delegate = self
     }
-    
+
     //show color popover
     presentViewController(colorPickerVc, animated: true, completion: nil)
 }
@@ -133,7 +133,7 @@ private func showColorPicker(){
 <pre>
 // outlet - change color button
 @IBOutlet var changeColorButton: UIButton!
-  
+
 // action - called when change color button clicked
 @IBAction func changeColorButtonClicked(sender: UIButton) {
   self.showColorPicker()
@@ -168,5 +168,4 @@ private func showColorPicker(){
 SwiftColorPicker is available under the MIT license. See the LICENSE file for more info.
 
 ## Legacy Version
-Xcode 6, iOS 8.4 based source code moved to ``Source-Xcode6`` folder. Please note that Xcode 6 based source code are deprecated and not upto date. I will suggest to use latest Xcode 7 based source from``SwiftColorPicker`` folder at root.
-
+Xcode 6, iOS 8.4 based source code moved to ``Source-Xcode6`` folder. Please note that Xcode 6 based source code are deprecated and not upto date. I will suggest to use latest Xcode 8 based source from``SwiftColorPicker`` folder at root.
