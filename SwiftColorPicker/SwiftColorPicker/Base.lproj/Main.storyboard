@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Color Picker Demo" id="RSe-6Q-S7s">
                         <barButtonItem key="rightBarButtonItem" title="Change" id="Kmj-W0-rhb">
                             <connections>
-                                <action selector="changeColorButtonNavClicked:" destination="BYZ-38-t0r" id="iHA-Wh-vw6"/>
+                                <action selector="changeColorButtonNavClickedWithSender:" destination="BYZ-38-t0r" id="ycT-0m-RgZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
