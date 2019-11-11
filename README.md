@@ -1,5 +1,5 @@
 # Swift Color Picker
-Color picker build with Swift 2, iOS 9, Xcode 7.
+Color picker build with Swift 5.1, iOS 13, Xcode 11.
 
 ## Overview
 The color picker view controller created with swift. It can be used to pick color from palette either as Hex string or UIColor.  Just add source file within any swift project, add view controller within storyboard, add collection view, set necessary properrty and constrains, and invoke as a popup. Once color picked it returns selected color value within delegate method.
@@ -11,15 +11,12 @@ The color picker view controller created with swift. It can be used to pick colo
 + Can be invoked by UIButton.
 + Can be invoked by navigation bar button.
 + You can Add more colors to palette via Colors.plist file.
-+ Buid with Swift 2, iOS 9, Xcode 7 only, No other dependency.
++ Buid with Swift 5.1, iOS 13, Xcode 11 only, No other dependency.
 
 ## Platform
-+ Swift 2
-+ iOS 9
-+ Xcode 7
-
-##Supported Device
-iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
++ Swift 5.1
++ iOS 13
++ Xcode 11
 
 ## How To Setup Color Picker Within Your Project
 
