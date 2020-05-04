@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mGc-ey-RSR">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mGc-ey-RSR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Color Picker Demo-->
@@ -14,28 +16,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-9v-OgV">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-9v-OgV">
                                 <rect key="frame" x="110" y="79" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="M6s-CI-GX4"/>
                                     <constraint firstAttribute="width" constant="100" id="WDx-Wr-esN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKR-IJ-SDv">
-                                <rect key="frame" x="113.5" y="187" width="94" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKR-IJ-SDv">
+                                <rect key="frame" x="160" y="212" width="94" height="30"/>
                                 <state key="normal" title="Change Color">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeColorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="da0-Ii-pBA"/>
+                                    <action selector="changeColorButtonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9P-Z7-KlR"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="TKR-IJ-SDv" secondAttribute="centerX" id="HEa-zf-NjR"/>
                             <constraint firstAttribute="centerX" secondItem="ijl-9v-OgV" secondAttribute="centerX" id="JwB-pH-TzB"/>
@@ -46,13 +48,12 @@
                     <navigationItem key="navigationItem" title="Color Picker Demo" id="RSe-6Q-S7s">
                         <barButtonItem key="rightBarButtonItem" title="Change" id="Kmj-W0-rhb">
                             <connections>
-                                <action selector="changeColorButtonNavClicked:" destination="BYZ-38-t0r" id="iHA-Wh-vw6"/>
+                                <action selector="changeColorButtonNavClickedWithSender:" destination="BYZ-38-t0r" id="ycT-0m-RgZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="changeColorButton" destination="TKR-IJ-SDv" id="t0g-hh-K72"/>
+                        <outlet property="changeColorButton" destination="TKR-IJ-SDv" id="Bza-cx-N3p"/>
                         <outlet property="changeColorButtonNav" destination="Kmj-W0-rhb" id="p7c-YG-Azt"/>
                         <outlet property="colorPreview" destination="ijl-9v-OgV" id="tJn-E8-NCq"/>
                     </connections>
@@ -74,8 +75,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="voM-vG-rR8">
-                                <rect key="frame" x="8" y="8" width="257" height="415"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="8" y="18" width="257" height="405"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="L13-rT-LkQ">
                                     <size key="itemSize" width="24" height="24"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -89,16 +90,15 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dRv-XJ-zTd" firstAttribute="top" secondItem="voM-vG-rR8" secondAttribute="bottom" constant="8" id="CRa-LY-QL7"/>
-                            <constraint firstItem="voM-vG-rR8" firstAttribute="top" secondItem="4xY-Mz-Uhw" secondAttribute="top" constant="8" id="QXf-5t-ti8"/>
+                            <constraint firstItem="voM-vG-rR8" firstAttribute="top" secondItem="4xY-Mz-Uhw" secondAttribute="top" constant="18" id="QXf-5t-ti8"/>
                             <constraint firstAttribute="trailing" secondItem="voM-vG-rR8" secondAttribute="trailing" constant="8" id="YRa-LT-NWn"/>
                             <constraint firstItem="voM-vG-rR8" firstAttribute="leading" secondItem="4xY-Mz-Uhw" secondAttribute="leading" constant="8" id="lP8-BM-3KB"/>
                         </constraints>
@@ -111,16 +111,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRu-Zb-aNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314.5" y="1002.5"/>
+            <point key="canvasLocation" x="1491" y="1004"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TI7-nA-rwH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGc-ey-RSR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OfF-6s-Xk6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

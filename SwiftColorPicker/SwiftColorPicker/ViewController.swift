@@ -34,7 +34,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     
     
     // class varible maintain selected color value
-    var selectedColor: UIColor = UIColor.blueColor()
+    var selectedColor: UIColor = UIColor.blue
     var selectedColorHex: String = "0000FF"
     
     
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         
         // show popover box for iPhone and iPad both
-        return UIModalPresentationStyle.None
+        return UIModalPresentationStyle.none
     }
     
     
@@ -83,7 +83,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     // MARK: Color picker delegate functions
     
     // called by color picker after color selected.
-    func colorPickerDidColorSelected(selectedUIColor selectedUIColor: UIColor, selectedHexColor: String) {
+    func colorPickerDidColorSelected(selectedUIColor: UIColor, selectedHexColor: String) {
        
         // update color value within class variable
         self.selectedColor = selectedUIColor
@@ -103,13 +103,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     private func showColorPicker(){
         
         // initialise color picker view controller
-        let colorPickerVc = storyboard?.instantiateViewControllerWithIdentifier("sbColorPicker") as! ColorPickerViewController
+        let colorPickerVc = storyboard?.instantiateViewController(withIdentifier: "sbColorPicker") as! ColorPickerViewController
         
         // set modal presentation style
-        colorPickerVc.modalPresentationStyle = .Popover
+        colorPickerVc.modalPresentationStyle = .popover
         
         // set max. size
-        colorPickerVc.preferredContentSize = CGSizeMake(265, 400)
+        colorPickerVc.preferredContentSize = CGSize.init(width: 265, height: 410)
         
         // set color picker deleagate to current view controller
         // must write delegate method to handle selected color
@@ -125,14 +125,14 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
             popoverController.sourceRect = self.changeColorButton.frame
             
             // show popover arrow at feasible direction
-            popoverController.permittedArrowDirections = UIPopoverArrowDirection.Any
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection.any
             
             // set popover delegate self
             popoverController.delegate = self
         }
         
         //show color popover
-        presentViewController(colorPickerVc, animated: true, completion: nil)
+        present(colorPickerVc, animated: true, completion: nil)
     }
     
     
@@ -140,13 +140,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     private func showColorPickerFromNavBar(){
         
         // initialise color picker view controller
-        let colorPickerVc = storyboard?.instantiateViewControllerWithIdentifier("sbColorPicker") as! ColorPickerViewController
+        let colorPickerVc = storyboard?.instantiateViewController(withIdentifier: "sbColorPicker") as! ColorPickerViewController
         
         // set modal presentation style
-        colorPickerVc.modalPresentationStyle = .Popover
+        colorPickerVc.modalPresentationStyle = .popover
         
         // set max. size
-        colorPickerVc.preferredContentSize = CGSizeMake(265, 400)
+        colorPickerVc.preferredContentSize = CGSize.init(width: 265, height: 410)
         
         // set color picker deleagate to current view controller
         // must write delegate method to handle selected color
@@ -159,14 +159,14 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
             popoverController.barButtonItem = self.changeColorButtonNav
             
             // show popover arrow at feasible direction
-            popoverController.permittedArrowDirections = UIPopoverArrowDirection.Any
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection.any
             
             // set popover delegate self
             popoverController.delegate = self
         }
         
         // show color popover
-        presentViewController(colorPickerVc, animated: true, completion: nil)
+        present(colorPickerVc, animated: true, completion: nil)
     }    
     
 
